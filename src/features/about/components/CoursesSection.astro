@@ -1,4 +1,6 @@
 ---
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
 // MataKuliahSection.astro - Courses carousel section
 ---
 
@@ -18,14 +20,14 @@
     id="matkul-carousel"
   >
     <button
-      class="absolute left-2 top-1/2 -translate-y-1/2 bg-blue-400 hover:bg-blue-500 border-none rounded-full w-8 h-8 sm:w-10 sm:h-10 text-white cursor-pointer transition-all duration-300 z-20 font-semibold carousel-nav prev text-sm sm:text-base"
+      class="absolute left-2 top-1/2 -translate-y-1/2 bg-blue-400 hover:bg-blue-500 border-none rounded-full w-8 h-8 sm:w-10 sm:h-10 text-white cursor-pointer transition-all duration-300 z-20 font-semibold carousel-nav prev text-sm sm:text-base flex items-center justify-center"
     >
-      ‹
+      <ChevronLeft className="m-auto" />
     </button>
     <button
-      class="absolute right-2 top-1/2 -translate-y-1/2 bg-blue-400 hover:bg-blue-500 border-none rounded-full w-8 h-8 sm:w-10 sm:h-10 text-white cursor-pointer transition-all duration-300 z-20 font-semibold carousel-nav next text-sm sm:text-base"
+      class="absolute right-2 top-1/2 -translate-y-1/2 bg-blue-400 hover:bg-blue-500 border-none rounded-full w-8 h-8 sm:w-10 sm:h-10 text-white cursor-pointer transition-all duration-300 z-20 font-semibold carousel-nav next text-sm sm:text-base flex items-center justify-center"
     >
-      ›
+      <ChevronRight className="m-auto" />
     </button>
 
     <div class="carousel-track flex space-x-4"></div>

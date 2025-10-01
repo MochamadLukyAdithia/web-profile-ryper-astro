@@ -1,0 +1,41 @@
+---
+// SejarahSection.astro - History timeline section
+---
+
+<section class="relative py-10 sm:py-16 md:py-20 overflow-hidden">
+  <!-- Background Decorations -->
+  <div class="absolute top-0 right-0 left-0 z-0 pointer-events-none">
+    <img
+      src="../images/about/element-right2.png"
+      alt="Top Decoration"
+      class="w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-[50rem] xl:h-[50rem] object-cover"
+      style="transform: rotate(-94.705deg)"
+    />
+  </div>
+  <div class="absolute -bottom-20 -right-20 z-0 pointer-events-none">
+    <img
+      src="../images/about/element-right2.png"
+      alt="Bottom Decoration"
+      class="w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-[50rem] xl:h-[50rem] object-cover"
+    />
+  </div>
+
+  <!-- Title -->
+  <div class="relative z-10 text-center mb-8 sm:mb-12 md:mb-16 px-4">
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white">
+      Sejarah Ryper Lab
+    </h2>
+  </div>
+
+  <!-- Sejarah Content -->
+  <div
+    class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 z-10"
+    id="sejarah-content"
+  >
+    <!-- Default Loading -->
+    <div
+      class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-white transform -translate-x-1/2 z-0"
+    ></div>
+    <p class="text-white text-center">Memuat sejarah...</p>
+  </div>
+</section>

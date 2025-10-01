@@ -1,0 +1,33 @@
+---
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { isCoursesArray, readCoursesService } from "../../services/read-courses";
+import ErrorBoundary from "@/components/boundaries/ErrorBoundary.astro";
+import { CoursesCarousel } from "./CoursesCarousel";
+
+// MataKuliahSection.astro - Courses carousel section
+
+const courses = await readCoursesService();
+---
+
+<section class="py-8 sm:py-12 md:py-16 px-4 sm:px-6">
+  <div class="text-center mb-10 sm:mb-12 md:mb-16">
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white">
+      Mata Kuliah Terafiliasi
+    </h2>
+    <p
+      class="text-gray-300 text-center max-w-2xl mx-auto mt-2 sm:mt-4 text-sm sm:text-base"
+    >
+      Mata kuliah yang menggunakan fasilitas Ryper Lab.
+    </p>
+  </div>
+  
+
+  {isCoursesArray(courses) ? (
+    <CoursesCarousel client:only="react" courses={courses} />
+  ) : (
+    <ErrorBoundary 
+            title="Terjadi Kesalahan pada Mata Kuliah"
+            message={courses.error}
+          />
+  )}
+</section>

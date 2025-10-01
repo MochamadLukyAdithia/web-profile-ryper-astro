@@ -1,0 +1,67 @@
+---
+import ErrorBoundary from "@/components/boundaries/ErrorBoundary.astro"
+import { readHistoryService, isHistoryArray } from "../../services/read-history"
+
+// SejarahSection.astro - History timeline section
+
+const historyData = await readHistoryService()
+
+---
+
+<section class="relative py-10 sm:py-16 md:py-20 overflow-hidden">
+  <!-- Background Decorations -->
+  <div class="absolute top-0 right-0 left-0 z-0 pointer-events-none">
+    <img
+      src="../images/about/element-right2.png"
+      alt="Top Decoration"
+      class="w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-[50rem] xl:h-[50rem] object-cover"
+      style="transform: rotate(-94.705deg)"
+    />
+  </div>
+  <div class="absolute -bottom-20 -right-20 z-0 pointer-events-none">
+    <img
+      src="../images/about/element-right2.png"
+      alt="Bottom Decoration"
+      class="w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-[50rem] xl:h-[50rem] object-cover"
+    />
+  </div>
+
+  <!-- Title -->
+  <div class="relative z-10 text-center mb-8 sm:mb-12 md:mb-16 px-4">
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white">
+      Sejarah Ryper Lab
+    </h2>
+  </div>
+
+  <!-- Sejarah Content -->
+  <div
+    class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 z-10"
+  >
+
+    {isHistoryArray(historyData) ? (
+      historyData.map((item, index) => (
+        <div  class={`relative max-w-5xl mx-auto flex flex-col items-center gap-6 md:gap-12 mb-14 md:mb-20 px-4 sm:px-6 md:flex-row ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}>
+          <div class="hidden md:block absolute left-1/2 w-4 h-4 bg-white border-4 border-gray-900 rounded-full transform -translate-x-1/2 z-10 top-4 md:top-8"></div>
+          <div class="w-full md:w-1/2 text-center md:text-left">
+          <div class="text-xl sm:text-2xl font-bold text-white mb-2">
+            {item.tahun}
+          </div>
+          <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+            {item.deskripsi}
+          </p>
+        </div>
+        <div class="w-full md:w-1/2">
+          <img src={item.gambar} alt={`History ${item.tahun}`}
+            class="w-full h-48 sm:h-64 md:h-72 object-cover rounded-lg shadow-md" />
+        </div>
+      </div>
+    ))
+    ) : (
+    <ErrorBoundary 
+            title="Terjadi Kesalahan pada Blog"
+            message={historyData.error}
+          />
+    )}
+
+  </div>
+</section>

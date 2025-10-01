@@ -251,7 +251,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
   // Panggil fungsi render saat DOM selesai dimuat
-  renderSejarah();
+  // renderSejarah();
   renderKepalaLab();
   renderPengurus();
   renderMataKuliah();

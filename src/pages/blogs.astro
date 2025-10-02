@@ -9,7 +9,7 @@ import { BlogContent } from '@/features/blogs/components/BlogContent';
 import ErrorBoundary from '@/components/boundaries/ErrorBoundary.astro';
 
 // Pastikan halaman ini SSR karena menggunakan Astro.url (query params runtime)
-export const prerender = false;
+export const prerender = true;
 
 // Ambil query params dan proses data blog
 const url = Astro.url;
@@ -17,7 +17,6 @@ const { category: currentFilter, searchQuery, currentPage: pageParam } = getBlog
 
 const blogs = await readBlogsService();
 ---
-
 <MainLayout>
   <main class="g min-h-screen  bg-gray-900">
     

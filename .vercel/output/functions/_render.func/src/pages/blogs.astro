@@ -1,0 +1,49 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import "../styles/blog.css";
+import { isBlogArray, readBlogsService } from '@/features/blogs/services/read-blogs';
+import { getBlogsListingParams } from '@/features/blogs/services/get-blogs-listing-params';
+import BlogHero from '@/features/blogs/components/BlogHero.astro';
+import BlogFilters from '@/features/blogs/components/BlogFilters.astro';
+import { BlogContent } from '@/features/blogs/components/BlogContent';
+import ErrorBoundary from '@/components/boundaries/ErrorBoundary.astro';
+
+// Pastikan halaman ini SSR karena menggunakan Astro.url (query params runtime)
+export const prerender = false;
+
+// Ambil query params dan proses data blog
+const url = Astro.url;
+const { category: currentFilter, searchQuery, currentPage: pageParam } = getBlogsListingParams(url);
+
+const blogs = await readBlogsService();
+---
+
+<MainLayout>
+  <main class="g min-h-screen  bg-gray-900">
+    
+    <div class="content-wrapper">
+      <BlogHero />
+
+      <div class="max-w-[1260px] mx-auto px-6 pt-20">
+        <BlogFilters currentFilter={currentFilter} searchQuery={searchQuery} baseSearchParams={url.searchParams} />
+
+        {isBlogArray(blogs) ? (
+          <BlogContent
+            blogs={blogs}
+            currentFilter={currentFilter}
+            searchQuery={searchQuery}
+            pageParam={pageParam}
+            baseQueryString={url.searchParams.toString()}
+            client:load
+          />
+        ) : (
+          <ErrorBoundary 
+            title="Terjadi Kesalahan pada Blog"
+            message={blogs.error}
+          />
+        )}
+      </div>
+    </div>
+
+  </main>
+</MainLayout>

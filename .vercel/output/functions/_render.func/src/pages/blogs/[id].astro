@@ -1,0 +1,28 @@
+---
+import "../../styles/blog-detail.css";
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { BackBtn } from '@/components/ui/BackBtn';
+import BlogDetailSection from '@/features/blogs/components/detail/BlogDetailSection.astro';
+import NotFoundError from '@/components/boundaries/NotFoundError.astro';
+
+const { id } = Astro.params;
+
+
+---
+<BaseLayout>
+<section class="fixed top-6 left-6 z-50 hidden sm:block">
+  <BackBtn client:load/>
+</section>
+
+
+<main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+  {id ? (
+    <BlogDetailSection id={id} />
+  ) : (
+    <NotFoundError message="Blog dengan ID tersebut tidak dapat ditemukan" />
+  )}
+  
+</main>
+    <!-- <script type="module" src="/src/scripts/detail.js" defer></script> -->
+</BaseLayout>

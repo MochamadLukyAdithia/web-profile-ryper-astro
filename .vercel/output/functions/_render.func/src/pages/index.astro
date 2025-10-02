@@ -1,0 +1,27 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import HeroSection from '@/features/home/components/HeroSection.astro';
+import MissionSection from '@/features/home/components/MissionSection.astro';
+import VisionSection from '@/features/home/components/VisionSection.astro';
+
+
+---
+
+<MainLayout>
+  
+      <div
+      id="global-loader"
+      data-loader-time="500"
+      class="loader-overlay fixed inset-0 bg-[#00052B] -z-10 flex items-center justify-center  show"
+    >
+      <div class="loader"></div>
+    </div>
+	
+   <HeroSection/>
+
+   <VisionSection/>
+
+   <MissionSection/>
+
+</MainLayout>
+

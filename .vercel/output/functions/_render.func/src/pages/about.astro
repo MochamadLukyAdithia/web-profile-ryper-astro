@@ -1,0 +1,292 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import "../styles/about.css";
+
+---
+<MainLayout showHeader={true} showFooter={true}>
+   
+    <section id="home" class="relative min-h-screen flex overflow-hidden">
+      <div class="absolute top-0 left-0 z-0">
+        <img
+          src="../images/about/elemt-left.png"
+          alt="Left Decoration"
+          class="w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-[50rem] xl:h-[50rem] object-cover"
+        />
+      </div>
+
+      <div class="absolute top-0 right-0 z-0">
+        <img
+          src="../images/about/element-right.png"
+          alt="Right Decoration"
+          class="w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-[50rem] xl:h-[50rem] object-cover"
+        />
+      </div>
+
+      <div
+        class="absolute right-12 sm:right-24 md:right-36 lg:right-48 xl:right-60 top-1/2 -translate-y-1/2 z-20 text-white text-right"
+      >
+        <h1
+          class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-wider"
+        >
+          ABOUT US
+        </h1>
+      </div>
+    </section>
+
+    <section class="py-8 sm:py-12 md:py-16 w-full h-full">
+      <div class="w-full max-w-screen-xl mx-auto px-4">
+        <img
+          src="../images/about/arti-logo.png"
+          alt="Arti Logo Ryper Lab"
+          class="w-full h-auto object-contain"
+        />
+      </div>
+    </section>
+
+    <section class="relative py-10 sm:py-16 md:py-20 overflow-hidden">
+      <!-- Background Decorations -->
+      <div class="absolute top-0 right-0 left-0 z-0 pointer-events-none">
+        <img
+          src="../images/about/element-right2.png"
+          alt="Top Decoration"
+          class="w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-[50rem] xl:h-[50rem] object-cover"
+          style="transform: rotate(-94.705deg)"
+        />
+      </div>
+      <div class="absolute -bottom-20 -right-20 z-0 pointer-events-none">
+        <img
+          src="../images/about/element-right2.png"
+          alt="Bottom Decoration"
+          class="w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-[50rem] xl:h-[50rem] object-cover"
+        />
+      </div>
+
+      <!-- Title -->
+      <div class="relative z-10 text-center mb-8 sm:mb-12 md:mb-16 px-4">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white">
+          Sejarah Ryper Lab
+        </h2>
+      </div>
+
+      <!-- Sejarah Content -->
+      <div
+        class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 z-10"
+        id="sejarah-content"
+      >
+        <!-- Default Loading -->
+        <div
+          class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-white transform -translate-x-1/2 z-0"
+        ></div>
+        <p class="text-white text-center">Memuat sejarah...</p>
+      </div>
+    </section>
+
+    <section class="py-10 sm:py-16 md:py-20 px-4 sm:px-6 relative">
+      <div class="absolute top-0 left-0 z-0">
+        <img
+          src="../images/about/element-right2.png"
+          alt="Background Left"
+          class="w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-[50rem] xl:h-[50rem] object-cover"
+          style="transform: rotate(45deg)"
+        />
+      </div>
+      <div class="absolute top-1/3 right-0 z-0">
+        <img
+          src="../images/about/element-right2.png"
+          alt="Background Right"
+          class="w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-[50rem] xl:h-[50rem] object-cover"
+          style="transform: rotate(-30deg)"
+        />
+      </div>
+      <div class="absolute -bottom-20 left-1/4 z-0">
+        <img
+          src="../images/about/element-center.png"
+          alt="Background Bottom"
+          class="w-64 h-64 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-[50rem] xl:h-[50rem] object-cover"
+          style="transform: rotate(120deg)"
+        />
+      </div>
+
+      <div class="relative z-10">
+        <div class="text-center mb-6 sm:mb-8 md:mb-10">
+          <h2
+            class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white"
+          >
+            Struktur Lab
+          </h2>
+        </div>
+
+        <div class="mb-8 sm:mb-12 md:mb-16">
+          <div class="text-center mb-4 sm:mb-6">
+            <div class="text-xl sm:text-2xl font-bold text-white">
+              Kepala Lab
+            </div>
+          </div>
+          <div class="flex justify-center" id="kepala-lab-content">
+            <p class="text-white">Memuat data kepala lab...</p>
+          </div>
+          <div
+            class="text-center mt-4 sm:mt-6 max-w-2xl mx-auto px-4"
+            id="kepala-lab-description"
+          >
+            <p class="text-gray-300 text-sm sm:text-base">
+              Sosok pemimpin laboratorium yang berdedikasi tinggi dalam
+              pengembangan teknologi dan pembelajaran inovatif di lingkungan
+              kampus.
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-12 sm:mb-16 md:mb-20">
+          <div class="text-center mb-6 sm:mb-8">
+            <h3 class="text-2xl sm:text-3xl font-bold text-white">BPH</h3>
+            <p
+              class="text-gray-300 text-center max-w-2xl mx-auto mt-2 sm:mt-4 px-4 text-sm sm:text-base"
+            >
+              Deskripsi singkat tentang BPH.
+            </p>
+          </div>
+
+          <div
+            class="relative overflow-hidden py-6 sm:py-8 md:py-10 px-4 sm:px-8 md:px-16 w-full carousel-container"
+            id="bph-carousel"
+          >
+            <button
+              class="absolute left-2 top-1/2 -translate-y-1/2 bg-blue-400 hover:bg-blue-500 border-none rounded-full w-8 h-8 sm:w-10 sm:h-10 text-white cursor-pointer transition-all duration-300 z-20 font-semibold carousel-nav prev text-sm sm:text-base"
+            >
+              ‹
+            </button>
+            <button
+              class="absolute right-2 top-1/2 -translate-y-1/2 bg-blue-400 hover:bg-blue-500 border-none rounded-full w-8 h-8 sm:w-10 sm:h-10 text-white cursor-pointer transition-all duration-300 z-20 font-semibold carousel-nav next text-sm sm:text-base"
+            >
+              ›
+            </button>
+
+            <div class="carousel-track flex space-x-4"></div>
+          </div>
+        </div>
+
+        <div class="mb-12 sm:mb-16 md:mb-20">
+          <div class="text-center mb-6 sm:mb-8">
+            <h3 class="text-2xl sm:text-3xl font-bold text-white">
+              Asisten Praktikum
+            </h3>
+            <p
+              class="text-gray-300 text-center max-w-2xl mx-auto mt-2 sm:mt-4 px-4 text-sm sm:text-base"
+            >
+              Deskripsi singkat tentang Asisten Praktikum.
+            </p>
+          </div>
+
+          <div
+            class="relative overflow-hidden py-6 sm:py-8 md:py-10 w-full px-4 sm:px-8 md:px-16 carousel-container"
+            id="asprak-carousel"
+          >
+            <button
+              class="absolute left-2 top-1/2 -translate-y-1/2 bg-blue-400 hover:bg-blue-500 border-none rounded-full w-8 h-8 sm:w-10 sm:h-10 text-white cursor-pointer transition-all duration-300 z-20 font-semibold carousel-nav prev text-sm sm:text-base"
+            >
+              ‹
+            </button>
+            <button
+              class="absolute right-2 top-1/2 -translate-y-1/2 bg-blue-400 hover:bg-blue-500 border-none rounded-full w-8 h-8 sm:w-10 sm:h-10 text-white cursor-pointer transition-all duration-300 z-20 font-semibold carousel-nav next text-sm sm:text-base"
+            >
+              ›
+            </button>
+
+            <div class="carousel-track flex space-x-4"></div>
+          </div>
+        </div>
+        <div class="mb-6 sm:mb-8 md:mb-10">
+          <div class="text-center mb-6 sm:mb-8">
+            <h3 class="text-2xl sm:text-3xl font-bold text-white">
+              Asisten Penelitian
+            </h3>
+            <p
+              class="text-gray-300 text-center max-w-2xl mx-auto mt-2 sm:mt-4 px-4 text-sm sm:text-base"
+            >
+              Deskripsi singkat tentang Asisten Penelitian.
+            </p>
+          </div>
+
+          <div
+            class="relative overflow-hidden py-6 sm:py-8 md:py-10 w-full px-4 sm:px-8 md:px-16 carousel-container"
+            id="aspen-carousel"
+          >
+            <button
+              class="absolute left-2 top-1/2 -translate-y-1/2 bg-blue-400 hover:bg-blue-500 border-none rounded-full w-8 h-8 sm:w-10 sm:h-10 text-white cursor-pointer transition-all duration-300 z-20 font-semibold carousel-nav prev text-sm sm:text-base"
+            >
+              ‹
+            </button>
+            <button
+              class="absolute right-2 top-1/2 -translate-y-1/2 bg-blue-400 hover:bg-blue-500 border-none rounded-full w-8 h-8 sm:w-10 sm:h-10 text-white cursor-pointer transition-all duration-300 z-20 font-semibold carousel-nav next text-sm sm:text-base"
+            >
+              ›
+            </button>
+
+            <div class="carousel-track flex space-x-4"></div>
+          </div>
+        </div>
+        <div class="mb-6 sm:mb-8 md:mb-10">
+          <div class="text-center mb-6 sm:mb-8">
+            <h3 class="text-2xl sm:text-3xl font-bold text-white">
+              Media Kreatif
+            </h3>
+            <p
+              class="text-gray-300 text-center max-w-2xl mx-auto mt-2 sm:mt-4 px-4 text-sm sm:text-base"
+            >
+              Deskripsi singkat tentang Media Kreatif.
+            </p>
+          </div>
+
+          <div
+            class="relative overflow-hidden py-6 sm:py-8 md:py-10 w-full px-4 sm:px-8 md:px-16 carousel-container"
+            id="medkre-carousel"
+          >
+            <button
+              class="absolute left-2 top-1/2 -translate-y-1/2 bg-blue-400 hover:bg-blue-500 border-none rounded-full w-8 h-8 sm:w-10 sm:h-10 text-white cursor-pointer transition-all duration-300 z-20 font-semibold carousel-nav prev text-sm sm:text-base"
+            >
+              ‹
+            </button>
+            <button
+              class="absolute right-2 top-1/2 -translate-y-1/2 bg-blue-400 hover:bg-blue-500 border-none rounded-full w-8 h-8 sm:w-10 sm:h-10 text-white cursor-pointer transition-all duration-300 z-20 font-semibold carousel-nav next text-sm sm:text-base"
+            >
+              ›
+            </button>
+
+            <div class="carousel-track flex space-x-4"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-8 sm:py-12 md:py-16 px-4 sm:px-6">
+      <div class="text-center mb-10 sm:mb-12 md:mb-16">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white">
+          Mata Kuliah Terafiliasi
+        </h2>
+        <p
+          class="text-gray-300 text-center max-w-2xl mx-auto mt-2 sm:mt-4 text-sm sm:text-base"
+        >
+          Mata kuliah yang menggunakan fasilitas Ryper Lab.
+        </p>
+      </div>
+      <div
+        class="relative overflow-hidden py-1 sm:py-2 md:py-4 w-full px-4 sm:px-8 md:px-16 carousel-container"
+        id="matkul-carousel"
+      >
+        <button
+          class="absolute left-2 top-1/2 -translate-y-1/2 bg-blue-400 hover:bg-blue-500 border-none rounded-full w-8 h-8 sm:w-10 sm:h-10 text-white cursor-pointer transition-all duration-300 z-20 font-semibold carousel-nav prev text-sm sm:text-base"
+        >
+          ‹
+        </button>
+        <button
+          class="absolute right-2 top-1/2 -translate-y-1/2 bg-blue-400 hover:bg-blue-500 border-none rounded-full w-8 h-8 sm:w-10 sm:h-10 text-white cursor-pointer transition-all duration-300 z-20 font-semibold carousel-nav next text-sm sm:text-base"
+        >
+          ›
+        </button>
+
+        <div class="carousel-track flex space-x-4"></div>
+      </div>
+    </section>
+    <script src="/src/scripts/about.js" defer></script>
+</MainLayout>

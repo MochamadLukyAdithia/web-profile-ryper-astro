@@ -39,17 +39,17 @@ const { currentFilter, searchQuery, baseSearchParams } = Astro.props as Props;
        class={`chip px-4 py-2 rounded-full text-sm font-medium ${currentFilter === 'event' ? 'active' : ''}`}>
       Event
     </a>
-    <a href={mergeSearchParams(baseSearchParams, { filter: 'material', page: 1 })}
-       class={`chip px-4 py-2 rounded-full text-sm font-medium ${currentFilter === 'material' ? 'active' : ''}`}>
-      Workshop
-    </a>
     <a href={mergeSearchParams(baseSearchParams, { filter: 'pengenalan', page: 1 })}
        class={`chip px-4 py-2 rounded-full text-sm font-medium ${currentFilter === 'pengenalan' ? 'active' : ''}`}>
       Pengenalan
     </a>
-    <a href={mergeSearchParams(baseSearchParams, { filter: 'latest', page: 1 })}
-       class={`chip px-4 py-2 rounded-full text-sm font-medium mr-6 ${currentFilter === 'latest' ? 'active' : ''}`}>
+    <a href={mergeSearchParams(baseSearchParams, { filter: 'penelitian', page: 1 })}
+       class={`chip px-4 py-2 rounded-full text-sm font-medium mr-6 ${currentFilter === 'penelitian' ? 'active' : ''}`}>
       Penelitian
+    </a>
+    <a href={mergeSearchParams(baseSearchParams, { filter: 'projek', page: 1 })}
+       class={`chip px-4 py-2 rounded-full text-sm font-medium mr-6 ${currentFilter === 'projek' ? 'active' : ''}`}>
+      Projek
     </a>
 
     <div id="search-container">

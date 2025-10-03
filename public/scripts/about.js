@@ -278,7 +278,12 @@ window.addEventListener("scroll", () => {
 function createPersonCard(item) {
   return `
      <div class="carousel-item bg-gradient-to-b z-60 from-white to-blue-200 rounded-2xl shadow-xl overflow-hidden relative text-center person-card mx-2 sm:mx-3 md:mx-4">
-    <img src="../images/logo.png" alt="Logo" class="absolute top-3 left-3 sm:top-4 sm:left-4 w-8 h-4 sm:w-10 sm:h-10 z-10">
+    <img 
+  src="../images/logo.png" 
+  alt="Logo" 
+  class="absolute top-3 left-3 sm:top-4 sm:left-4 h-8 sm:h-10 object-contain z-10"
+/>
+
     <img 
         src="${item.img}" 
         alt="${item.name}" 

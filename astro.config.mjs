@@ -7,7 +7,7 @@ import vercel from "@astrojs/vercel";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://ryperlabfasilkomunej.vercel.app",
+  site: "https://ryperlab.my.id",
   output: "server",   
   adapter: vercel(),  
   vite: {

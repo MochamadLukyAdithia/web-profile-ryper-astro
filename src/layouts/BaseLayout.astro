@@ -11,13 +11,27 @@ import "../styles/global.css";
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="" />
 		<meta name="generator" content={Astro.generator} />
-		<!--  !! Todo: change description -->
 		<SEO 
 			title="Ryper Lab Universitas Jember"
 			description="Ryper Lab merupakan salah satu laboratorium yang dimiliki oleh Fakultas Ilmu Komputer Universitas Jember yang berfokus pada analisis, pengembangan, desain dan implementasi perangkat lunak. Ryper Lab memiliki asisten laboratorium yang terbagi menjadi 3 bidang yang terdiri dari asisten praktikum (pendidikan), asisten penelitian."  
 			url="https://ryperlab.my.id"
 			image="https://ryperlab.my.id/logo.png"
 		/>
+		<script type="application/ld+json">
+			{JSON.stringify({
+			  "@context": "https://schema.org",
+			  "@type": "Organization",
+			  name: "Ryper Lab Universitas Jember",
+			  url: "https://ryperlab.my.id",
+			  logo: "https://ryperlab.my.id/logo.png",
+			  sameAs: [
+				"https://instagram.com/ryperlabunej",
+				"https://github.com/RyperLab-UNEJ",
+				"https://www.linkedin.com/company/ryper-lab/",
+				"https://www.youtube.com/@rplunej5484"
+			  ]
+			})}
+		</script>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="robots" content="index, follow" />
 		<link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />

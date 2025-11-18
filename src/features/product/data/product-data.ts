@@ -40,6 +40,13 @@ export const ProductData: ProductType[] = [
         category: "Produk Aslab"
     },
     {
+        id_product: "6",
+        title: "Web Ponpes Darun Najah",
+        image: "https://res.cloudinary.com/dxcconkoi/image/upload/v1763480882/Screenshot_from_2025-11-18_22-47-39_yrtyly.png",
+        link: "https://web-profile-pondok-darun-najah-nati.vercel.app/",
+        category: "Produk Aslab"
+    },
+    {
         id_product: "7",
         title: "Social Media Downloader",
         image: "https://res.cloudinary.com/dxcconkoi/image/upload/v1763473566/Screenshot_from_2025-11-18_20-40-06_dmlndr.png",
@@ -121,6 +128,13 @@ export const ProductData: ProductType[] = [
         title: "Projek Scratch (Coding Seru)",
         image: "https://res.cloudinary.com/dxcconkoi/image/upload/v1763473576/Screenshot_from_2025-11-18_20-42-34_mba7sq.png",
         link: "https://scratch.mit.edu/search/projects?q=suhailahnfsella",
+        category: "Produk Aslab" 
+    },
+    {
+        id_product: "19",
+        title: "Forum Ilkom",
+        image: "https://res.cloudinary.com/dxcconkoi/image/upload/v1763481184/Screenshot_from_2025-11-18_22-52-45_hu8gbk.png",
+        link: "https://fkom.my.id",
         category: "Produk Aslab" 
     }
 ];

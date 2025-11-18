@@ -8,7 +8,7 @@ export const MobileNav = () => {
       <NavItem Icon={Globe} nameRoute="Blog" destinationRoute="/blogs" />
       <NavItem Icon={Users} nameRoute="About" destinationRoute="/about" />
       <NavItem Icon={BookOpen} nameRoute="Material" destinationRoute="/material" />
-      <NavItem Icon={Package} nameRoute="Produk" destinationRoute="/produk" />
+      <NavItem Icon={Package} nameRoute="Produk" destinationRoute="/product" />
     </nav>
   );
 };

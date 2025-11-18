@@ -24,10 +24,10 @@ export default function ProductCard({ post }: ProductCardProps) {
             <div
               className="
                 w-full 
-                aspect-[4/3]        /* mobile: proporsi nyaman */
-                sm:aspect-[3/2]     /* tablet */
-                md:aspect-[4/2.5]   /* laptop */
-                lg:aspect-[4/2]     /* desktop */
+                aspect-[4/3]       
+                sm:aspect-[3/2]    
+                md:aspect-[4/2.5]  
+                lg:aspect-[4/2]     
                 overflow-hidden
               "
             >

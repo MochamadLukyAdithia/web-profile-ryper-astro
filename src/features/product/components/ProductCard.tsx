@@ -17,7 +17,7 @@ export default function ProductCard({ post }: ProductCardProps) {
       >
         <div className="relative">
           {post.image ? (
-            <div className="w-full h-80 md:h-60 lg:h-80 bg-gray-100 relative overflow-hidden">
+            <div className="w-full h-80 sm:h-32 md:h-44 lg:h-80 bg-gray-100 relative overflow-hidden">
               <img
                 src={post.image}
                 alt={`Preview ${post.title}`}
@@ -27,7 +27,7 @@ export default function ProductCard({ post }: ProductCardProps) {
               />
             </div>
           ) : (
-            <div className="w-full h-80 md:h-60 lg:h-80 flex items-center justify-center bg-gray-100 text-gray-600">
+            <div className="w-full h-80 sm:h-32 md:h-44 lg:h-80 flex items-center justify-center bg-gray-100 text-gray-600">
               Gambar Preview belum tersedia
             </div>
           )}

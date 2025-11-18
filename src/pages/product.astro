@@ -1,0 +1,56 @@
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import BlogHero from '@/features/blogs/components/BlogHero.astro';
+import ProductGrid from '@/features/product/components/ProductGrid';
+
+import type { ProductType, ProductCategory } from '@/types/models/product-type';
+import { readProduct } from "@/features/product/services/read-products";
+import '../styles/global.css';
+
+const allProducts: ProductType[] = readProduct();
+
+const filterProducts = (category: ProductCategory) => 
+  allProducts.filter(p => p.category === category);
+
+const productsRPL   = filterProducts("Produk RPL");
+const productsAslab = filterProducts("Produk Aslab");
+---
+
+<MainLayout>
+  <main class="g min-h-screen bg-gray-900 text-white py-12">
+    <div class="content-wrapper">
+      <BlogHero title="PRODUCT" />
+
+      <h1 class="text-3xl font-bold mb-6 text-center">Daftar Produk Kami</h1>
+      <p class="text-center text-gray-300 mb-12 max-w-3xl mx-auto px-4">
+        Berikut adalah daftar produk dan project yang pernah kami buat, dikelompokkan berdasarkan kategori.
+      </p>
+
+      {/* --- PRODUK RPL --- */}
+      <section class="mb-16 text-center">
+        <h2 class="text-4xl font-extrabold text-gray-100 mb-10">
+          Produk RPL
+        </h2>
+
+        {productsRPL.length > 0 ? (
+          <ProductGrid client:load posts={productsRPL} />
+        ) : (
+          <p class="text-gray-400 text-center py-10">Belum ada produk untuk kategori Produk RPL.</p>
+        )}
+      </section>
+
+      {/* --- PRODUK ASLAB --- */}
+      <section class="text-center">
+        <h2 class="text-4xl font-extrabold text-gray-100 mb-10">
+          Produk Aslab
+        </h2>
+
+        {productsAslab.length > 0 ? (
+          <ProductGrid client:load posts={productsAslab} />
+        ) : (
+          <p class="text-gray-400 text-center py-10">Belum ada produk untuk kategori Produk Aslab.</p>
+        )}
+      </section>
+    </div>
+  </main>
+</MainLayout>

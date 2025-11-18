@@ -1,0 +1,13 @@
+---
+// src/pages/admin.astro
+import AdminPanel from "../components/AdminPanel.jsx";
+---
+
+<html>
+  <head>
+    <title>Admin Panel</title>
+  </head>
+  <body>
+    <AdminPanel client:only="react" />
+  </body>
+</html>

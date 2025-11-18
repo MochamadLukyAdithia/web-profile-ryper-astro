@@ -1,0 +1,68 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+// Ambil ID dari parameter URL
+const { id } = Astro.params;
+
+// Fetch detail materi berdasarkan ID
+const apiUrl = `http://localhost:3000/api/materi/${id}`;
+
+let materi = null;
+
+try {
+  const res = await fetch(apiUrl);
+  materi = await res.json();
+} catch (error) {
+  console.error("Gagal fetch detail materi:", error);
+}
+---
+
+<BaseLayout>
+  <main class="min-h-screen bg-gray-900 text-white">
+    <div class="max-w-4xl mx-auto py-24 px-6">
+      {materi ? (
+        <article>
+          <h1 class="text-3xl font-bold mb-4 text-blue-400">{materi.judul}</h1>
+          <p class="text-gray-300 mb-6">{materi.deskripsi}</p>
+
+          {materi.konten ? (
+            <>
+              <section class="mb-8">
+                <h2 class="text-xl font-semibold mb-2">Penjelasan</h2>
+                <p class="text-gray-200 leading-relaxed">{materi.konten.teks}</p>
+              </section>
+
+              <section class="mb-8">
+                <h2 class="text-xl font-semibold mb-2">Contoh Kode</h2>
+                <pre class="bg-gray-800 p-4 rounded-xl overflow-auto text-sm text-gray-100">
+<code>{materi.konten.kodeContoh}</code>
+                </pre>
+              </section>
+
+              <section>
+                <h2 class="text-xl font-semibold mb-2">Hasil</h2>
+                <div class="bg-white text-black rounded-xl p-4" set:html={materi.konten.hasilPreview}></div>
+
+              </section>
+            </>
+          ) : (
+            <p class="text-gray-400">Konten materi belum tersedia.</p>
+          )}
+
+          <div class="mt-10">
+            <a
+              href="/material"
+              class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg transition"
+            >
+              ← Kembali ke Daftar Materi
+            </a>
+          </div>
+        </article>
+      ) : (
+        <div class="text-center text-gray-400 mt-20">
+          <p>Gagal memuat detail materi.</p>
+        </div>
+      )}
+    </div>
+  </main>
+</BaseLayout>

@@ -43,7 +43,7 @@ export const ProductData: ProductType[] = [
         id_product: "6",
         title: "Web Ponpes Darun Najah",
         image: "https://res.cloudinary.com/dxcconkoi/image/upload/v1763480882/Screenshot_from_2025-11-18_22-47-39_yrtyly.png",
-        link: "https://web-profile-pondok-darun-najah-nati.vercel.app/",
+        link: "https://ppdarunnajahalirfany.net/",
         category: "Produk Aslab"
     },
     {
